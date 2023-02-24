@@ -7,8 +7,9 @@ PRIVATE_KEY = process.env.PRIVATE_KEY
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.9",
+  defaultNetwork : 'bcb',
   networks : {
-    goerli : {
+    bcb : {
       url : HTTP_URL,
       accounts : [PRIVATE_KEY]
     }

@@ -168,6 +168,14 @@ export default function Home() {
     const provider = await web3ModalRef.current.connect(true);
     const web3Provider = new providers.Web3Provider(provider);
 
+    // If user is not connected to the BCB network, let them know and throw an error
+    const { chainId } = await web3Provider.getNetwork();
+    if (chainId !== 97) {
+      window.alert("Change the network to BCB");
+      throw new Error("Change network to BCB");
+    }
+
+
     if (needSigner) {
       const signer = web3Provider.getSigner();
       return signer
