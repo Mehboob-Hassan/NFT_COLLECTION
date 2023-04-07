@@ -170,9 +170,9 @@ export default function Home() {
 
     // If user is not connected to the BCB network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 97) {
-      window.alert("Change the network to BCB");
-      throw new Error("Change network to BCB");
+    if (chainId !== 5) {
+      window.alert("Change the network to Goerli");
+      throw new Error("Change network to Goerli");
     }
 
 
@@ -210,7 +210,7 @@ export default function Home() {
         disableInjectedProvider: false,
       });
       connectWallet();
-    }
+    
 
     //  check if parsale started and ended
     const _checkParsaleStarted = checkIfPresaleStarted();
@@ -236,7 +236,7 @@ export default function Home() {
     setInterval(async () => {
       await getTokenIdMinted();
     }, 5 * 1000);
-
+  }
   }, [walletConnected]);
 
 

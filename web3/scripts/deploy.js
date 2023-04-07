@@ -5,15 +5,15 @@ async function main() {
   const whitelistContract = WHITELIST_CONTRACT_ADDRESS;
   const metadata_url = METADATA_URL;
 
-  const Lock = await hre.ethers.getContractFactory("CryptoDevs");
-  const lock = await Lock.deploy(
+  const CryptoDev = await hre.ethers.getContractFactory("CryptoDevs");
+  const cryptoDev = await CryptoDev.deploy(
     whitelistContract,
     metadata_url
   );
 
-  await lock.deployed();
+  await cryptoDev.deployed();
 
-  console.log("Token deployed on address: ", lock.address);
+  console.log("Token deployed on address: ", cryptoDev.address);
 }
 
 main().catch((error) => {
@@ -21,5 +21,5 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 
-// 0xc11afEe5C12Ac25c70f2DA074da1518bA344D61c
-// Contract Deployed on BCB
+// 0xEA8182A5966Fb58b0D209038e2cc4cA57D865Fca
+// Contract Deployed on Goerli

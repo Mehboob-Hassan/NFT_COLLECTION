@@ -582,4 +582,4 @@ export const abi = [
   }
 ]
 
-export const NFT_CONTRACT_ADDRESS = "0xc11afEe5C12Ac25c70f2DA074da1518bA344D61c"
+export const NFT_CONTRACT_ADDRESS = "0xEA8182A5966Fb58b0D209038e2cc4cA57D865Fca" //Goerli Testnet
