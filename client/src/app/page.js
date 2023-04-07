@@ -6,6 +6,7 @@ import { NFT_CONTRACT_ADDRESS, abi } from './constants'
 import Web3Modal from "web3modal";
 
 
+
 export default function Home() {
   const [walletConnected, setWalletConnected] = useState(false);
   const [presaleStarted, setPresaleStarted] = useState(false);
@@ -13,7 +14,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [isOwner, setIsOwner] = useState(false);
   const [ownerAddr, setOwnerAddr] = useState("");
-  const [tokeIdsMinted, setTokenIdsMinted] = useState(0);
+  const [tokenIdsMinted, setTokenIdsMinted] = useState(0);
 
   // create an instance to web3 model (to connect metamask)
   const web3ModalRef = useRef();
@@ -254,7 +255,7 @@ export default function Home() {
     if (loading) {
       return <button className={styles.button}>Loading...</button>;
     }
-  }
+
 
   // if connected user is owner and parsale hasn't started yet
   if (isOwner && !presaleStarted) {
@@ -295,18 +296,19 @@ export default function Home() {
       </button>
     )
   };
+}
   return (
-    <div>
-      <Head>
+    <div className={styles.App}>
+      {/* <Head>
         <title>Crypto Devs</title>
         <meta name="description" content="Whitelist-Dapp" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
+          <h1 className={styles.title}>Welcome to NFT Collection!</h1>
           <div className={styles.description}>
-            Its an NFT collection for developers in Crypto.
+            You can mint NFTs here by Clicking Mint NFT Button.
           </div>
           <div className={styles.description}>
             {tokenIdsMinted}/20 have been minted
@@ -319,7 +321,7 @@ export default function Home() {
       </div>
 
       <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
+        Made with &#10084;&#65039; by MH-3.0
       </footer>
     </div>
   );

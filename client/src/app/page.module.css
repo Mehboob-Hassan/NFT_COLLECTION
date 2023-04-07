@@ -1,5 +1,7 @@
+
 .main {
-  min-height: 90vh;
+  color: #eaeaea;
+  min-height: 85vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -8,6 +10,9 @@
 }
 
 .footer {
+  color: white;
+  font-size: 1.5vw;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, serif;
   display: flex;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
